@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
-    tools:context=".MainActivity">
+    tools:context=".RegistrationActivity">
+
 
     <EditText
         android:id="@+id/emailButtonRegister"
@@ -19,10 +20,9 @@
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintVertical_bias="0.37" />
 
     <EditText
         android:id="@+id/passwordButtonRegister"
@@ -36,11 +36,9 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.366" />
-
+        app:layout_constraintVertical_bias="0.437" />
 
     <Button
         android:id="@+id/registerButton"
@@ -53,10 +51,9 @@
         android:text="Register account "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446" />
+        app:layout_constraintVertical_bias="0.507" />
 
     <TextView
         android:id="@+id/alreadyHaveAnAccountButton"
@@ -66,15 +63,15 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="32dp"
         android:shadowColor="#FAF6F6"
-        android:textStyle="bold"
         android:text="Already have an account ? "
         android:textColor="#FFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.552" />
+        app:layout_constraintVertical_bias="0.619" />
 
     <EditText
         android:id="@+id/userNameButtonRegister"
@@ -86,8 +83,32 @@
         android:hint="Username"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.212" />
+        app:layout_constraintVertical_bias="0.303" />
+
+    <Button
+        android:id="@+id/selectPhotoRegistryButton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/rounded_select_photo_button"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/userNameButtonRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/selectPhotoImageViewButton"
+        app:civ_border_width="4dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="@+id/selectPhotoRegistryButton"
+        app:layout_constraintEnd_toEndOf="@+id/selectPhotoRegistryButton"
+        app:layout_constraintStart_toStartOf="@+id/selectPhotoRegistryButton"
+        app:layout_constraintTop_toTopOf="@+id/selectPhotoRegistryButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

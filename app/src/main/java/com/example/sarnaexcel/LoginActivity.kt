@@ -3,11 +3,9 @@ package com.example.sarnaexcel
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -23,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
 
         }
         backToRegistrationButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, RegistrationActivity::class.java)
             startActivity(intent)
         }
 
@@ -46,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this, MenuActivity::class.java)
                 startActivity(intent)
             }.addOnFailureListener {
-                Log.d("Main", "Wrong email or password: ${it.message}")
+                Log.d("LoginActivity", "Wrong email or password: ${it.message}")
                 Toast.makeText(this, "Wrong email or password: ${it.message}", Toast.LENGTH_SHORT)
                     .show()
             }
