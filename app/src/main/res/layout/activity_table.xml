@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/table1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:stretchColumns="0,1" >
+
+    <TableRow >
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/et1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:hint="Enter Android Version"
+            />
+    </TableRow>
+
+    <TableRow >
+        <EditText
+            android:inputType="text"
+            android:id="@+id/et2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:hint="Enter Android Code Name"
+            />
+    </TableRow>
+
+    <TableRow >
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:inputType="text"
+            android:text="Add"
+            android:onClick="addRow"
+            />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Version"
+            android:background="#eb4034"
+            android:layout_marginTop="16dp"/>
+        android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Code Name"
+            android:background="#eb4034"
+            android:layout_marginTop="16dp"/>
+        android:layout_marginBottom="16dp"/>
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8.0"
+            android:background="#eb4034"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pie"
+            android:background="#eb4034"
+            android:layout_marginTop="16dp"/>
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9.0"
+            android:background="#eb4034"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Orec"
+            android:background="#eb4034"
+            android:layout_marginTop="16dp"/>
+
+    </TableRow>
+
+</TableLayout>
