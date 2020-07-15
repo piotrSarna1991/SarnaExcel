@@ -4,94 +4,82 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:stretchColumns="0,1" >
+    android:stretchColumns="0,1">
 
-    <TableRow >
+    <TableRow>
+
         <EditText
-            android:inputType="numberDecimal"
             android:id="@+id/et1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="15dp"
-            android:hint="Enter Android Version"
-            />
+            android:hint="Enter ID Number"
+            android:inputType="numberDecimal"
+            android:textSize="15dp" />
     </TableRow>
 
-    <TableRow >
+    <TableRow>
+
         <EditText
-            android:inputType="text"
             android:id="@+id/et2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="15dp"
-            android:hint="Enter Android Code Name"
-            />
+            android:hint="Enter Name"
+            android:inputType="text"
+            android:textSize="15dp" />
     </TableRow>
 
-    <TableRow >
+    <TableRow>
+
+        <EditText
+            android:id="@+id/et3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter Surname"
+            android:inputType="text"
+            android:textSize="15dp" />
+    </TableRow>
+
+    <TableRow>
+
         <Button
             android:id="@+id/btn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="15dp"
             android:inputType="text"
-            android:text="Add"
             android:onClick="addRow"
-            />
+            android:text="Add"
+            android:textSize="15dp" />
     </TableRow>
 
-    <TableRow>
+
+    <TableRow android:id="@+id/ExtraText">
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Version"
-            android:background="#eb4034"
-            android:layout_marginTop="16dp"/>
+            android:layout_width="177dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:text="ID Number" />
         android:layout_marginBottom="16dp"/>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="104dp"
             android:layout_height="wrap_content"
-            android:text="Code Name"
-            android:background="#eb4034"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:text="Name" />
+        android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:text="Surname" />
         android:layout_marginBottom="16dp"/>
 
     </TableRow>
 
-    <TableRow>
-        <TextView
-            android:id="@+id/version"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="8.0"
-            android:background="#eb4034"
-            android:layout_marginTop="16dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Pie"
-            android:background="#eb4034"
-            android:layout_marginTop="16dp"/>
-
-    </TableRow>
-
-    <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="9.0"
-            android:background="#eb4034"
-            android:layout_marginTop="16dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Orec"
-            android:background="#eb4034"
-            android:layout_marginTop="16dp"/>
-
-    </TableRow>
+    <TableRow/>
 
 </TableLayout>

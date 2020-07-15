@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
 
         }
         backToRegistrationButton.setOnClickListener {
-            val intent = Intent(this, RegistrationActivity::class.java)
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
 
                 // else if successful
                 Log.d("LoginActivity", "Successfully log in")
-                val intent = Intent(this, TableActivity::class.java)
+                val intent = Intent(this, MenuActivity::class.java)
                 startActivity(intent)
             }.addOnFailureListener {
                 Log.d("LoginActivity", "Wrong email or password: ${it.message}")
