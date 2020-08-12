@@ -1,15 +1,12 @@
-package com.example.sarnaexcel
+package com.example.sarnaexcel.model
 
-import android.app.Person
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.TableRow
 import android.widget.TextView
-import com.google.firebase.database.FirebaseDatabase
-
+import androidx.appcompat.app.AppCompatActivity
+import com.example.sarnaexcel.R
 import kotlinx.android.synthetic.main.activity_table.*
 
 class TableActivity : AppCompatActivity() {
@@ -35,7 +32,11 @@ class TableActivity : AppCompatActivity() {
             name.layoutParams=layoutParams
             surname.setBackgroundColor(Color.parseColor("#FFFFFF"))
             surname.layoutParams = layoutParams
-            val tableDatas = TableDatas(et1.text.toString(),et2.text.toString(),et3.text.toString())
+            val tableDatas = Person(
+                et1.text.toString(),
+                et2.text.toString(),
+                et3.text.toString()
+            )
             saveDataOnFireBase(tableDatas)
             id.text = et1.text
             name.text = et2.text
@@ -55,12 +56,8 @@ class TableActivity : AppCompatActivity() {
         et3.text = null
     }
 
-    fun saveDataOnFireBase (tableDatas: TableDatas) {
-        val reference = FirebaseDatabase.getInstance().getReference("/tables").push()
-        reference.setValue(tableDatas)
-            .addOnSuccessListener {
-                Log.d("Table","Data saved: ${reference.key}")
-            }
+    fun saveDataOnFireBase (tableDatas: Person) {
+
 
     }
     private fun readUserFromFirebaseDatabase() {
@@ -68,4 +65,3 @@ class TableActivity : AppCompatActivity() {
     }
 }
 
- class TableDatas(val id:String,val name:String,val surname:String)
