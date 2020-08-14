@@ -11,6 +11,7 @@ import com.example.sarnaexcel.R
 import com.example.sarnaexcel.model.TableActivity
 import com.example.sarnaexcel.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlin.math.log
 
 class LoginActivity : AppCompatActivity(), ILoginView {
 
@@ -34,18 +35,9 @@ class LoginActivity : AppCompatActivity(), ILoginView {
                 emailLoginButton.text.toString(),
                 passwordLoginButton.text.toString()
 
+            )
 
-
-
-           )
-
-
-
-
-
-        }
-//            loginActivity()
-//
+        } //
 
 
         backToRegistrationButton.setOnClickListener {
@@ -53,8 +45,13 @@ class LoginActivity : AppCompatActivity(), ILoginView {
             startActivity(intent)
         }}
 
+    fun goToMenu(){
+        val intent = Intent(this@LoginActivity, MenuActivity::class.java)
+        startActivity(intent)
 
-}
+
+
+}}
 
 
 
