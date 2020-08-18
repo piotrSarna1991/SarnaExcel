@@ -7,9 +7,10 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.sarnaexcel.view.RegisterActivity
 import com.example.sarnaexcel.model.TableActivity
+import com.example.sarnaexcel.view.View
 
 
-class MenuActivity : AppCompatActivity() {
+class MenuActivity : AppCompatActivity(),View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
@@ -17,7 +18,12 @@ class MenuActivity : AppCompatActivity() {
 
 
 
-    }}
+    }
+
+    override fun navigateTo(target: Class<*>) {
+        startActivity(Intent(this, target))
+    }
+}
 
 //    private fun verifyUserIsLoggedIn() {
 //        val uid = FirebaseAuth.getInstance().uid

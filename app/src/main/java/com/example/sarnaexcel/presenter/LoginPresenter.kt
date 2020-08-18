@@ -1,28 +1,23 @@
 package com.example.sarnaexcel.presenter
 
+import android.content.Intent
 import android.os.Parcel
 import android.os.Parcelable
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.sarnaexcel.MenuActivity
 import com.example.sarnaexcel.common.Common
 import com.example.sarnaexcel.model.APIResponse
 import com.example.sarnaexcel.remote.IMyAPI
-import com.example.sarnaexcel.view.ILoginView
-import com.example.sarnaexcel.view.LoginActivity
-import com.example.sarnaexcel.view.NavigationFinish
-import com.example.sarnaexcel.view.View
+import com.example.sarnaexcel.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LoginPresenter(internal var iLoginView: ILoginView) : ILoginPresenter,NavigationFinish {
+class LoginPresenter(internal var iLoginView: ILoginView) : ILoginPresenter, NavigationFinish,AppCompatActivity() {
 
     internal lateinit var mService: IMyAPI
-    internal lateinit var loginActivity: LoginActivity
-
-
-
-
+    internal lateinit var menuActivity: MenuActivity
 
 
 
@@ -47,9 +42,7 @@ class LoginPresenter(internal var iLoginView: ILoginView) : ILoginPresenter,Navi
 
                         } else {
                             iLoginView.OnLoginResult("Login success")
-                        onAnimationFinished()
-
-
+                         onAnimationFinished()
                         }
 
                     }
@@ -62,8 +55,8 @@ class LoginPresenter(internal var iLoginView: ILoginView) : ILoginPresenter,Navi
     }
 
     override fun onAnimationFinished() {
-      loginActivity = LoginActivity()
-       loginActivity.navigateTo(MenuActivity::class.java)    }
+        menuActivity.navigateTo(MenuActivity::class.java)
+    }
 
 
 }
